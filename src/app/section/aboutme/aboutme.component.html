@@ -1,0 +1,22 @@
+<mat-grid-list cols="2" rowHeight="2:2"  *ngFor="let datos of name" >
+  <mat-grid-tile >
+    <section>
+      <div>
+        <img    src= " {{ datos.foto}}  " class="img-perfil ">
+      </div>
+      <div >
+          <br>
+           <p style="font-size   :   25px" >    {{datos.nombre }} {{datos.apellido}} </p>
+         <p style="font-size: 17px "> {{datos.profesion  }}</p>
+        </div>
+     </section>
+  </mat-grid-tile>
+  <mat-grid-tile class="left">
+    <section style="padding:  25px">
+      <div>
+        <h1>About Me   </h1>
+        <span > {{datos.descripcion  }}</span>
+      </div>
+    </section>
+  </mat-grid-tile>
+</mat-grid-list>

@@ -1,0 +1,47 @@
+
+<body>
+<mat-toolbar>
+  <span style="margin-left: 8px">CV</span>
+  <span class="example-spacer"></span>
+  <div class="flex-container">
+    <button mat-raised-button   routerLink="/home"   > Inicio
+      <mat-icon>home </mat-icon >
+    </button>
+    <button mat-raised-button routerLink="/admin/edu/list"   >   Educacion
+      <mat-icon> school</mat-icon>
+    </button>
+    <button mat-raised-button  routerLink ="/admin/work/list"   >   Laboral
+      <mat-icon>work</mat-icon  >
+       </button>
+    <button mat-raised-button  routerLink="/admin/skills/list"   >  Skills
+      <mat-icon>settings</mat-icon   >
+    </button >
+    <button mat-raised-button     (click)="logout() ">  Logout
+     </button>
+  </div>
+ </mat-toolbar>
+     <br>
+    <br >
+    <div  class ="container text-center"  >
+      <h1 style= "text-align: center "> Listado de Usuarios  </h1>
+      <br>
+     <table class ="table table-light"  >
+     <thead>
+      <tr>
+       <th scope="col">   ID</th >
+        <th scope="col" > Nombre</th>
+        <th scope="col" > Apellido  </th >
+        <th scope="col" >Email</th>
+      </tr>
+     </thead  >
+       <tbody >
+        <tr  *ngFor="let user   of users" >
+         <td >{{ user.id }} </td >
+          <td >  {{user.nombre}}</td>
+          <td>{{user.apellido}}</td>
+          <td>{{user.email }}</td>
+       </tr>
+     </tbody>
+    </table>
+ </div>
+ </body>

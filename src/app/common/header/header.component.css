@@ -1,0 +1,25 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar {
+  height : 110px;
+  background: linear-gradient(to left, #04A0D0, #04A065);
+  color: white;
+  font-family : "Dubai";
+}
+
+mat-icon {
+  color: white;
+}
+
+button {
+  display:  inline-block ;
+  justify-content:   space-between;
+  flex-wrap: wrap;
+  margin-left: 20px;
+  background-color: transparent;
+   color: white;
+}
+
+

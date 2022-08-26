@@ -1,0 +1,38 @@
+<mat-toolbar>
+  <span style="margin-left: 8px">CV</span>
+  <span class="example-spacer "></span>
+  <div class="flex-container ">
+    <button mat-raised-button  > Inicio
+      <mat-icon>home </mat-icon >
+    </button>
+    <button mat-raised-button  *ngIf=" validarUser(); else edu "  routerLink="/admin/edu/list">  Educacion
+      <mat-icon> school</mat-icon>
+     </button>
+     <ng-template  #edu>
+       <button  mat-raised-button  (click)="login('/login'  )">  Education
+         <mat-icon >school</mat-icon >
+       </button>
+     </ng-template>
+      <button   mat-raised-button   *ngIf= "validarUser(); else work " routerLink="/admin/work/list" > Laboral
+      <mat-icon>work</mat-icon>
+    </button >
+     <ng-template  #work>
+         <button mat-raised-button (click)="login('/login')"> Laboral
+       <mat-icon>work</mat-icon>
+       </button>
+     </ng-template>
+     <button  mat-raised-button  *ngIf="validarUser(); else skill "   routerLink =  "/admin/skills/list">Skills
+      <mat-icon>settings</mat-icon>
+    </button >
+      <ng-template #skill  >
+       <button  mat-raised-button (click)=" login('/login' ) ">  Skill
+          <mat-icon>settings</mat-icon>
+       </button>
+        </ng-template>
+    <button mat-raised-button    *ngIf="validarUser(); else  loggin"  (click)="logout()">Logout
+    </button >
+    <ng-template #loggin>
+      <button  mat-raised-button  (click)= "login('/login')"> Login </button>
+    </ng-template>
+  </div>
+</mat-toolbar>

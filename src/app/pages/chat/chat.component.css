@@ -1,0 +1,9 @@
+ .scrollarea  {
+  min-height: 500px ;
+}
+
+input:focus {
+     outline: none ;
+
+     box-shadow: none;
+}

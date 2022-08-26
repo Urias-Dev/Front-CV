@@ -1,0 +1,17 @@
+<mat-grid-list cols="2" rowHeight="2:2">
+    <mat-grid-tile *ngFor="let data of datas" >
+    <section >
+       <div>
+        <img    src= " {{data.logo }}"  class="img-utrm">
+      </div>
+      <div>
+         <br>
+        <span>  {{  data.institucion}}</span>
+          <br>
+        <span>{{data.fecha  }}</span>
+        <br>
+        <span  > {{ data. especialidad}}</span>
+      </div >
+     </section >
+   </mat-grid-tile>
+</mat-grid-list>

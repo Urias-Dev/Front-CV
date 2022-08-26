@@ -1,0 +1,43 @@
+<br>
+ <br>
+<br>
+  <body >
+ <div class="container  w-75 rounded shadow align-items-stretch"  >
+  <br >
+  <h1 style="text-align:  center" > Editar </h1>
+  <br>
+   <div class="p-5"  >
+    <form  class ="row g-3"    [formGroup]= "formEditar"  (ngSubmit)="editar(formEditar.value )" >
+      <div class="col-md-6" >
+        <label for="inputEmpresa"   class="form-label"  >  Empresa</label >
+          <input   type="text"   class="form-control"  id = "inputEmpresa"   formControlName="empresa"  required >
+        <br  >
+        <div class="alert alert-danger text-center  p-2"   *ngIf="datos['empresa' ].errors?.required">  empresa requerido </div>
+       </div >
+      <div class="col-md-6"   >
+        <label for="inputFecha" class ="form-label" >  Fecha</label>
+        <input type="text" class="form-control" id="inputFecha"   formControlName="fecha"   required >
+        <br>
+         <div class="alert alert-danger  text-center   p-2" *ngIf="datos['fecha'].errors?.required">fecha requerida </div>
+      </div >
+
+      <div class="col-md-12"    >
+        <label for="inputDescripcion" class="form-label"  > Descripcion</label>
+        <input   type="text"    class="form-control" id="inputDescripcion"   formControlName="descripcion"  required >
+         <br >
+        <div class="alert alert-danger  text-center p-2"   *ngIf="datos['descripcion'].errors?.required"  > descripcion requerido </div >
+      </div >
+      <div class="col-md-12"  >
+        <label for="inputLogo"  class ="form-label" >Img  </label>
+        <input  type="text"  class="form-control" id="inputLogo"  formControlName="logo"  required >
+        <br>
+        <div class="alert alert-danger  text-center p-2"  *ngIf="datos['logo'].errors?.required ">img requerido </div>
+      </div >
+         <div  class="col-md-12 d-grid"  >
+          <button  class="btn btn-primary"   [disabled]="formEditar.invalid"  >  Guardar  </button>
+      </div>
+    </form >
+  </div>
+</div >
+</body>
+

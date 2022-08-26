@@ -1,0 +1,16 @@
+<div class="container" >
+  <mat-grid-list cols="2" rowHeight="2:2">
+    <mat-grid-tile   class="example-card  align-content-between"   *ngFor="let data of datas " >
+      <mat-card class="p-2">
+        <mat-card-header >
+          <mat-card-title> {{ data.empresa   }}</mat-card-title>
+          <mat-card-subtitle>   {{data.fecha}}</mat-card-subtitle>
+         </mat-card-header>
+        <img mat-card-image  src =  "{{data.logo }} "  >
+        <mat-card-content class=" text-center p-2">
+            <span> {{  data.descripcion }} </span>
+        </mat-card-content>
+      </mat-card >
+    </mat-grid-tile >
+  </mat-grid-list>
+</div>

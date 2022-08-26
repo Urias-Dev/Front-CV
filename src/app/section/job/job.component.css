@@ -1,0 +1,41 @@
+mat-grid-tile {
+
+ }
+
+.container {
+  flex: 1 ;
+}
+
+.container > p {
+  text-align: center;
+}
+.example-card {
+  max-width: 450px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+mat-progress-bar {
+  height: 10px;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+.img-ingles {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+ }
+
+.img-español {
+  height: 30px;
+  width: 30px;
+  margin-left: 10px;
+}
+
+span {
+  margin-left: 10px;
+}

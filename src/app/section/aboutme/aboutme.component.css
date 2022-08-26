@@ -1,0 +1,21 @@
+mat-grid-tile{
+  /*background: lightblue ;*/
+  text-align: center;
+}
+
+h1, mat-grid-list, span{
+  font-family: Dubai;
+  font-size: 17px;
+}
+
+.left {
+  text-align: left;
+}
+
+.img-perfil  {
+  width: 300px;
+  height: 300px ;
+  border-radius: 300px ;
+  background-size: cover;
+  background-position: center;
+}

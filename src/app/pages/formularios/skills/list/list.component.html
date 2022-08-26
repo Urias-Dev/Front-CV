@@ -1,0 +1,30 @@
+<br >
+<br >
+<div  class = "container  text-center "  >
+  <h1 style= "text-align: center ">Listado de Datos Modulo Skill  </h1>
+  <br>
+  <table  class ="table  table-striped  table-bordered  table-hover"   >
+    <thead >
+    <tr style="color:  white"   class="bg-dark"  >
+      <th scope="col" >  ID</th >
+      <th scope="col" > Lenguaje  </th>
+      <th scope="col" > Porcentaje    </th >
+       <th scope="col"> Img </th>
+       <th   scope="col" > Action  </th>
+    </tr>
+    </thead >
+    <tbody >
+     <tr  *ngFor=  "let skill of  skills" >
+      <td> {{skill.id}}</td >
+      <td  > {{ skill.lenguaje }}  </td >
+      <td>{{skill .porcentaje }} %   </td>
+       <td> {{ skill.logo}}</td>
+      <td  class="d-grid" >
+        <button class="btn btn-primary m-1"    (click)=" editar(skill.id)">Editar </button>
+        <button class="btn btn-danger m-1"   (click)="eliminar(skill.id)"  > Eliminar </button>
+         <button class="btn btn-success m-1" routerLink="/admin/skills/">  Crear </button>
+       </td>
+    </tr>
+    </tbody>
+   </table>
+</div   >

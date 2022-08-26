@@ -1,0 +1,37 @@
+<br>
+<br>
+<br>
+<body >
+<div class="container  w-75 rounded shadow align-items-stretch"  >
+  <br >
+  <h1 style="text-align:  center" >  Editar </h1>
+  <br>
+  <div class="p-5"  >
+    <form  class ="row g-3"    [formGroup]="formEditar"   (ngSubmit)="editar(formEditar.value )" >
+      <div class="col-md-6" >
+        <label for="inputLenguaje"    class="form-label"  >   Lenguaje </label >
+        <input   type="text"   class="form-control"  id = "inputLenguaje"       formControlName="lenguaje"    required >
+        <br  >
+        <div class="alert alert-danger text-center    p-2"   *ngIf=" datos['lenguaje' ].errors?.required" >  lenguaje  requerido </div>
+      </div >
+      <div class="col-md-6"    >
+        <label for="inputPorcentaje"  class ="form-label" >  Porcentaje  </label>
+        <input type="text" class="form-control" id="inputPorcentaje"   formControlName="porcentaje"    required >
+        <br>
+        <div class="alert alert-danger   text-center   p-2" *ngIf="datos['porcentaje'].errors?.required">porcentaje requerida </div>
+       </div  >
+      <div class="col-md-12"    >
+        <label for="inputLogo"  class ="form-label"  > URL Img   </label>
+        <input type="text" class="form-control" id="inputLogo"   formControlName="logo"    required >
+         <br>
+        <div class="alert alert-danger   text-center   p-2" *ngIf="datos['logo'].errors?.required">img  requerida </div>
+       </div >
+      <div  class="col-md-12 d-grid"  >
+        <button  class="btn btn-primary"    [disabled]="formEditar.invalid"  >  Guardar  </button>
+      </div>
+    </form >
+   </div>
+</div >
+</body>
+
+

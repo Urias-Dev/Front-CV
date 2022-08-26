@@ -1,0 +1,47 @@
+<body >
+   <div class="container  w-75 rounded shadow align-items-stretch"  >
+  <br >
+  <h1 style="text-align: center" > Formulario Registro  </h1>
+  <br>
+  <div class="p-5">
+    <form  class ="row  g-3"  [formGroup]="formRegistro" >
+      <div class="col-md-6" >
+        <label for="inputName" class="form-label" > Nombre  </label>
+        <input type="text"  class="form-control"  id ="inputName" formControlName ="nombre" >
+      </div>
+       <div class="col-md-6"  >
+        <label for="inputApellido" class ="form-label"> Apellido</label>
+        <input type="text" class="form-control" id="inputApellido"  formControlName="apellido" >
+      </div>
+      <div class="col-md-12" >
+        <label for="inputEmail" class="form-label"  >Email </label  >
+        <input type="email"  class="form-control"  id="inputEmail" placeholder="Ingrese su email  "  formControlName="email" >
+       </div>
+      <div class="col-md-6">
+        <label for="inputUsername" class="form-label"  >  Username</label>
+        <input type="text"   class="form-control" id="inputUsername"  formControlName="username">
+      </div>
+      <div class="col-md-6"  >
+        <label for="inputPassword" class="form-label" >Password</label>
+        <input  type="password"  class="form-control" id="inputPassword" formControlName="password" >
+         </div>
+       <div class="col-md-6">
+         <label for="inputFoto"  class="form-label"> Foto  </label>
+         <input type="text" class="form-control" id="inputFoto"   formControlName="foto">
+       </div>
+      <div class="col-md-6">
+        <label for="inputProfesion" class="form-label"> Profesion  </label>
+        <input  type="text" class="form-control" id="inputProfesion"    formControlName="profesion">
+      </div>
+      <div class="col-md-12" >
+        <label for="inputDescripcion" class="form-label">   Descripcion  </label>
+         <textarea   id="inputDescripcion" class="form-control"  rows="10"  formControlName="descripcion" >
+        </textarea>
+       </div>
+       <div class="col-12 d-grid"   >
+        <button  class="btn btn-primary"  (click)="registro   ( )">Registrarse  </button>
+       </div>
+     </form>
+  </div>
+   </div>
+</body>

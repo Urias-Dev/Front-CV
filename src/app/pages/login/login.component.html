@@ -1,0 +1,33 @@
+<body>
+<div class="container w-75 bg-light rounded shadow" >
+  <div class=  "row align-items-stretch">
+    <div class="col bg d-none d-lg-block cold-md-5   col-lg-5 col-xl-6 rounded"  >
+    </div>
+     <div class="col bg-white p-5 rounded-end" >
+      <div class="text-end">
+      </div>
+      <h2   class= "fw-bold text-center pt-5 py-5" >Bienvenido</h2>
+      <form   [formGroup]="formLogin"    >
+        <div  class="mb-4" >
+           <label   for="username" class="form-label"> Username  </label>
+            <input type= "text"  class="form-control"   id="username" formControlName="username"   required  >
+          </div >
+        <div  class="alert alert-danger p-2 text-center d-grid"   *ngIf = "datos['username'].errors?.required  && datos['username'].touched "  > usuario requerido </div>
+
+        <br>
+        <div   class="mb-4"   >
+          <label for =  "password"  class ="form-label"    > Password</label>
+           <input type= "password"  class="form-control"   id="password"  formControlName="password"  required >
+          </div>
+        <div   class= "alert alert-danger p-2 d-grid  text-center"  *ngIf= "datos['password' ] .errors?.required   && datos ['password']. touched  ">password requerido  </div>
+         <div   class="d-grid" >
+          <button   type="" class="btn btn-primary"    (click) ="login (   ) "   [disabled]="formLogin.invalid">Iniciar  Sesion </button>
+        </div >
+           <div class="my-3 text-center" >
+            <span>¿No tienes cuenta?   <a routerLink = "/registro" >Registrate</a></span>
+        </div>
+       </form >
+    </div>
+  </div>
+</div>
+</body>

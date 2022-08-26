@@ -1,0 +1,19 @@
+mat-grid-tile {
+  background-image: url("src/assets/img/pexels-dominika-roseclay-1036808.jpg") ;
+  background-size: cover ;
+  background-position:  center;
+}
+
+.example-card {
+  max-width: 120px;
+  margin: 35px;
+}
+
+.container  {
+  display:  inline-flex;
+}
+
+
+mat-card-content {
+  text-align: center  ;
+}

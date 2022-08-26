@@ -1,0 +1,22 @@
+mat-grid-tile {
+  text-align: center;
+}
+mat-grid-list {
+  background-image: url("src/assets/img/fondo_education.jpg");
+}
+
+span {
+  font-family: Dubai;
+  font-size: 18px ;
+}
+
+.img-utrm {
+  width: 450px;
+  height: 200px;
+
+}
+
+.img-cecyte {
+  width: 430px;
+  height: 150px ;
+}
